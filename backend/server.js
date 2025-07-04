@@ -1,9 +1,10 @@
 import express from "express";
 import cors from "cors";
-import { comparePW, hashPW } from "./modules/user";
-import { createUser, getUser, updateUser } from "./modules/db";
+import { comparePW, hashPW } from "./modules/user.js";
+import { createUser, getUser, updateUser } from "./modules/db.js";
 
 app = express();
+PORT = 3000;
 app.use(cors(), express.json());
 
 //user endpoints
@@ -47,4 +48,8 @@ app.update("/user/update", (res, req) => {
   } catch (error) {
     res.send(error);
   }
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
 });
