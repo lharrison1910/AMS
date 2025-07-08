@@ -18,5 +18,5 @@ app.use("/users", userRoutes);
 app.use("/paperwork", paperworkRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+  console.log(`listening on port ${PORT}`);
 });
